@@ -9,7 +9,7 @@ const [error,setError]=useState(``)
 const [isValueVaild, setIsValueValid] = useState(true)
  const onInputButtonClick=()=>{
 const promtValue = prompt()
-if (promtValue.length < 3){
+if (promtValue.length < 3 || promtValue === null) {
     setIsValueValid(false)
     setError(`error`)
 
