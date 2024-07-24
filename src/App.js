@@ -46,9 +46,9 @@ const  onAddButtonClick=()=>{
             </div>
             <div className={styles["list-container"]}>
                 <h2 className={styles["list-heading"]}>Список:</h2>
-                <p className={styles["no-margin-text"]}>
-
-                </p>
+               {list.length === 0 && <p className={styles["no-margin-text"]}>
+                    <h2>Нет добавленных элементов</h2>
+                </p>}
                 <ul className={styles["list"]}>
                     {list.map((item)=>{
                         return <li key={item.id}>{item.value} дата создания: {new Date(item.id).toLocaleString('ru-RU', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })}</li>
