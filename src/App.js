@@ -51,7 +51,7 @@ const  onAddButtonClick=()=>{
                 </p>
                 <ul className={styles["list"]}>
                     {list.map((item)=>{
-                        return <li key={item.id}>{item.value} дата создания: {new Date().toLocaleString('ru-RU', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })}</li>
+                        return <li key={item.id}>{item.value} дата создания: {new Date(item.id).toLocaleString('ru-RU', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })}</li>
                     })}
 
                 </ul>
