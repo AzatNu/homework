@@ -9,7 +9,7 @@ const [error,setError]=useState(``)
 const [isValueVaild, setIsValueValid] = useState(true)
  const onInputButtonClick=()=>{
 const promtValue = prompt()
-if (promtValue.length < 3 || promtValue === null) {
+if (  promtValue === null || promtValue.length < 3) {
     setIsValueValid(false)
     setError(`error`)
 
@@ -35,7 +35,7 @@ const  onAddButtonClick=()=>{
                 <output className={styles["current-value"]}></output>
             </p>
             {error !== `` && <div className={styles["error"]}>
-                Введенное значение должно содержать минимум 3 символа
+                Введенное значение не должно быть пустым и содержать минимум 3 символа
             </div>}
 
             <div className={styles["buttons-container"]}>
